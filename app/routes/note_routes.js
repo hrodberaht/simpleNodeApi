@@ -1,4 +1,5 @@
 module.exports = function(app,db){
+    
     app.get('/notes',(req,res)=>{
         db.collection('notes').find().toArray((err,item)=>{
             if(err) console.log(err)
@@ -6,6 +7,7 @@ module.exports = function(app,db){
             res.send(item);
         });
     });
+
     
     app.post('/notes',(req,res) =>{
         
