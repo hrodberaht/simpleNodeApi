@@ -20,8 +20,11 @@ MongoClient.connect(db.url,(err,database)=>{
     const data = database.db("nodeapi")
     require('./app/routes')(app,data);
 
-    app.listen(port,() => console.log("Server starts"));
+    //app.listen(port,() => console.log("Server starts"));
 })
 
+// require('./app/routes')(app,{});
 
+// app.listen(port,() => console.log("Server starts"));
 
+module.exports = app;
