@@ -9,8 +9,8 @@ describe('api routes', function(){
             .get('/user')
             .end(
                function(err,res) {
-                console.log(res.text);
-                //expect(res.body.name).to.be.ok;
+                //console.log(res.text);
+                expect(res.body.name).to.be.equal("hello");
                 done(); 
             })
             
