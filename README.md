@@ -1,4 +1,4 @@
-https://travis-ci.org/hrodberaht/simpleNodeApi.svg?branch=master
+<img src="https://travis-ci.org/hrodberaht/simpleNodeApi.svg?branch=master"/>
 
 This is simple NodeJs Api connect to mongoDB.
 Pull this api.
