@@ -1,3 +1,5 @@
+https://travis-ci.org/hrodberaht/simpleNodeApi.svg?branch=master
+
 This is simple NodeJs Api connect to mongoDB.
 Pull this api.
 To start api create folder config and creat file db.js
