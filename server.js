@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 
-//const db = require('./config/db');
+const db = require('./config/db');
 const port = process.env.PORT || 3000;
 
 const app = express();
@@ -15,16 +15,17 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-// MongoClient.connect(db.url,(err,database)=>{
-//     if(err) console.log(err)
-//     const data = database.db("nodeapi")
-//     require('./app/routes')(app,data);
+MongoClient.connect(db.url,(err,database)=>{
+    if(err) console.log(err)
+    const data = database.db("nodeapi")
+    console.log(data);
+    require('./app/routes')(app,data);
 
-//     //app.listen(port,() => console.log("Server starts"));
-// })
+    app.listen(port,() => console.log("Server starts"));
+})
 
-require('./app/routes/index')(app,{});
+// require('./app/routes/index')(app,{});
 
-app.listen(port,() => console.log("Server starts"));
+// app.listen(port,() => console.log("Server starts"));
 
 module.exports = app;
