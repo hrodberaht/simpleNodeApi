@@ -9,6 +9,6 @@ Paste this code to db.js:module.exports = {
 
 Next in console write npm install
 and npm run dev 
-Api run on port: 8000
+Api run on port: 3000
 
 
