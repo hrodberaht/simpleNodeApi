@@ -1,3 +1,5 @@
+const note = require("../models/notes");
+
 module.exports = function(app,db){
     
     app.get('/notes',(req,res)=>{
@@ -11,7 +13,8 @@ module.exports = function(app,db){
     
     app.post('/notes',(req,res) =>{
         
-        const note = {title: req.body.title, text: req.body.body};
+        note.title = req.body.title;
+        note.body = req.body.body;
         
         db.collection('notes').insert(note, (err, result) => {    
             if (err) { 
