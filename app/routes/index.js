@@ -3,7 +3,7 @@
 // const userRoutes = require('./user_routes');
 
 const start = require("../controllers/start");
-
+const ceneoController = require("../controllers/ceneoController")
 
 module.exports = function(app){
 
@@ -12,4 +12,6 @@ module.exports = function(app){
     // noteRoutes(app,db);
     // userRoutes(app,db);
     // error404Routes(app,db);// this route must be last
+    app.route("/ceneo")
+    .get(ceneoController.ceneo);
 }
