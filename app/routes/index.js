@@ -8,7 +8,7 @@ const start = require("../controllers/start");
 module.exports = function(app){
 
     app.route("/")
-    .get(start);
+    .get(start.start);
     // noteRoutes(app,db);
     // userRoutes(app,db);
     // error404Routes(app,db);// this route must be last
