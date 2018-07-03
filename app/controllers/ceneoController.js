@@ -11,11 +11,27 @@ const ceneo = function parseXMLtoCeneo(req,res,next){
         if(err)
             throw err;
         parser.parseString(body,function(err,result){
-            res.send(result.offers.o);
+            const data = create();
+            fs.writeFile("./public/xml/ceneo.xml",data, (err) => {
+                if(err)
+                    throw err;
+                
+                res.send(result.offers.o);
+            })
         })
        
     });
 }
 
+const create = function createCeneoXml() {
+    let data = '<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">\n';
+        
+    for (let i = 0; i < 10; i++) {
+            data += "hello \n";
+        }
+    data += '</offers>';
+
+    return data;
+}
 
 module.exports = { ceneo };
