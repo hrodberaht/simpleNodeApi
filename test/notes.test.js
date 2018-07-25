@@ -13,7 +13,6 @@ describe('api routes', function(){
                     done();
                 }
             )
-        done();
         })
     })
 })

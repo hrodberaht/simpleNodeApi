@@ -14,7 +14,6 @@ describe('api routes', function(){
                 expect(res.body.name).to.be.equal("hello");
                 done();
             })
-            done();
         })
         
     })

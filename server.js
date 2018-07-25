@@ -28,8 +28,8 @@ if (fs.exists("./config/config.js")) {
     })
 } 
 else {
-
-    require('./app/routes/index')(app);
+    
+    require('./app/routes/index')(app,{});
     app.listen(port,() => console.log("Server starts with fake data"));
 }
 
