@@ -23,7 +23,7 @@ const ceneo = function parseXMLtoCeneo(req,res,next){
     });
 }
 
-const create = function createCeneoXml() {
+const create = function createXmlForCeneo() {
     let data = '<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">\n';
         
     for (let i = 0; i < 10; i++) {
