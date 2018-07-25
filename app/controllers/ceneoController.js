@@ -3,7 +3,7 @@ const request = require("request");
 const xml2js = require("xml2js");
 const parser = new xml2js.Parser();
 
-const urlToXML = require("../../config/config").xml;
+// const urlToXML = require("../../config/config").xml;
 
 const ceneo = function parseXMLtoCeneo(req,res,next){
     const xml = urlToXML;
